@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "fullName": "Test User",
+    "gender": null,
+    "email": "20201234@stud.fci-cu.edu.eg",
+    "studentId": "20201234",
+    "academicLevel": null,
+    "password": "test1234",
+    "profilePhotoPath": null
+  },
+  {
+    "id": 2,
+    "fullName": "abdelrahman wael",
+    "gender": "Male",
+    "email": "20220183@stud.fci-cu.edu.eg",
+    "studentId": "20220183",
+    "academicLevel": 4,
+    "password": "abdowaelabdo55",
+    "profilePhotoPath": null
+  },
+  {
+    "id": 3,
+    "fullName": "Test User",
+    "gender": null,
+    "email": "test@stud.fci-cu.edu.eg",
+    "studentId": "12345678",
+    "academicLevel": null,
+    "password": "password123",
+    "profilePhotoPath": null
+  },
+  {
+    "id": 4,
+    "fullName": "abdelrahman wael",
+    "gender": "Female",
+    "email": "20220184@stud.fci-cu.edu.eg",
+    "studentId": "20220184",
+    "academicLevel": 3,
+    "password": "",
+    "profilePhotoPath": null
+  }
+]
