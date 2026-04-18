@@ -1,7 +1,7 @@
 // server.js
 const express = require('express');
 const cors = require('cors');
-const { MongoClient, ObjectId } = require('mongodb');
+const { MongoClient } = require('mongodb');
 
 const app = express();
 app.use(cors());
@@ -123,7 +123,9 @@ app.put('/api/auth/user/:id', async (req, res) => {
   try {
     const id = parseInt(req.params.id);
     const update = { ...req.body };
+
     delete update._id;
+    delete update.password;
 
     const result = await usersCol().findOneAndUpdate(
       { id },
