@@ -169,7 +169,7 @@ app.get('/api/tasks/:userId', async (req, res) => {
 // POST /api/tasks
 app.post('/api/tasks', async (req, res) => {
   try {
-    const { userId, title, description, dueDate, priority, isCompleted, createdAt } = req.body;
+    const { userId, title, description, dueDate, priority, isCompleted, isFavorite, createdAt } = req.body;
 
     if (!userId || !title || !dueDate || !priority) {
       return res.status(400).json({ success: false, message: 'Missing required fields' });
@@ -184,6 +184,7 @@ app.post('/api/tasks', async (req, res) => {
       dueDate,
       priority,
       isCompleted: isCompleted || false,
+      isFavorite: isFavorite || false,
       createdAt: createdAt || new Date().toISOString(),
     };
 
