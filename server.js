@@ -186,7 +186,7 @@ app.post('/api/tasks', async (req, res) => {
       isCompleted: isCompleted || false,
       isFavorite: isFavorite || false,
       createdAt: createdAt || new Date().toISOString(),
-      updatedAt: updatedAt|| new Date().toISOString(),
+      updatedAt: updatedAt|| null,
     };
 
     await tasksCol().insertOne(newTask);
@@ -204,6 +204,7 @@ app.put('/api/tasks/:id', async (req, res) => {
     const id = parseInt(req.params.id);
     const update = { ...req.body };
     delete update._id;
+    update.updatedAt = new Date().toISOString();
 
     const result = await tasksCol().findOneAndUpdate(
       { id },
